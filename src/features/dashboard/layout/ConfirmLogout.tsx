@@ -11,7 +11,7 @@ const ConfirmLogout = () => {
   };
   return (
     <div className="fixed inset-0 justify-center items-center flex bg-black/20">
-      <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
+      <div className="w-9/10 max-w-md bg-white p-6 rounded-lg shadow-lg">
         <h2 className="text-xl font-semibold ">Confirm Logout</h2>
         <p className="text-gray-600 mb-4">Are you sure you want to logout?</p>
         <div className="flex justify-end gap-3">

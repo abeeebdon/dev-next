@@ -7,6 +7,7 @@ import AppInput from "@/components/input/AppInput";
 import AppButton from "@/components/button/AppButton";
 import * as yup from "yup";
 import { registerSchema } from "../components/authSchema";
+import JompstartLogo from "@/assets/JompstartLogo";
 
 type RegisterFormValues = yup.InferType<typeof registerSchema>;
 
@@ -26,9 +27,12 @@ export default function Register() {
 
   return (
     <section className="flex h-screen py-6 items-center justify-center">
-      <main className="w-full max-w-md rounded-lg bg-white p-8 shadow-lg">
+      <main className="w-full max-w-md rounded-lg bg-white shadow p-8 mt-10">
         {/* Header */}
-        <div className="mb-6 text-center">
+        <div className="flex justify-center pt-20">
+          <JompstartLogo />
+        </div>
+        <div className="mb-6 text-center mt-2">
           <h3 className="text-xl font-semibold">Create your account</h3>
           <p className="text-sm text-gray-500">
             Fill in the information below to get started
