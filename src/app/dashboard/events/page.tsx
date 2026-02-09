@@ -1,7 +1,7 @@
-import React from "react";
+import EventPage from "@/features/events/EventPage";
 
 const page = () => {
-  return <div>page</div>;
+  return <EventPage />;
 };
 
 export default page;

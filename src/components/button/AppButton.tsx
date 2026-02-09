@@ -25,7 +25,7 @@ export default function AppButton({
   return (
     <Button
       className={cn(
-        "flex items-center gap-2 w-full p-3 rounded-lg font-semibold",
+        "flex items-center gap-2 w-full h-11 px-6 p-3 rounded-lg font-semibold",
         appVariant === "primary" &&
           "bg-orange-500 text-white hover:bg-orange-600",
         appVariant === "secondary" &&
@@ -40,7 +40,7 @@ export default function AppButton({
       ) : (
         <>
           {leftIcon && <span>{leftIcon}</span>}
-          <span>{children}</span>
+          <span className="block">{children}</span>
           {rightIcon && <span>{rightIcon}</span>}
         </>
       )}

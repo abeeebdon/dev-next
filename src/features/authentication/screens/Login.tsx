@@ -8,6 +8,7 @@ import AppButton from "@/components/button/AppButton";
 import Link from "next/link";
 import { setCookie } from "@/utils/helpers/cookies";
 import { useRouter } from "next/navigation";
+import JompstartLogo from "@/assets/JompstartLogo";
 type LoginFormValues = yup.InferType<typeof loginSchema>;
 
 const Login = () => {
@@ -26,9 +27,12 @@ const Login = () => {
     router.push("/dashboard");
   };
   return (
-    <section className="flex justify-center  h-screen items-center ">
-      <main className="w-full max-w-md text-center rounded-lg bg-white p-8 shadow-lg">
-        <div>
+    <section className="flex justify-center h-screen items-center md:items-start  ">
+      <main className="w-full max-w-md text-center rounded-lg h-fit bg-white shadow p-8 ">
+        <div className="flex justify-center ">
+          <JompstartLogo />
+        </div>
+        <div className="mt-2">
           <h3>Welcome back</h3>
           <p>Sign in to continue to your account</p>
         </div>

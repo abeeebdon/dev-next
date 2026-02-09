@@ -1,26 +1,38 @@
 "use client";
+import JompstartLogo from "@/assets/JompstartLogo";
 import AppButton from "@/components/button/AppButton";
+import { Menu } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export const Header = () => {
   const router = useRouter();
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <header className="flex h-16 items-center justify-between border-b bg-white px-6">
-      <h2 className="text-lg font-semibold">Dashboard</h2>
-      <article className="flex items-center gap-4">
-        <AppButton
-          appVariant="primary"
-          onClick={() => router.push("/auth/register")}
-        >
-          Register
-        </AppButton>
-        <AppButton
-          onClick={() => router.push("/auth/login")}
-          appVariant="secondary"
-        >
-          Login
-        </AppButton>
-      </article>
+    <header className="flex h-20 py-5 bg-white shadow px-6">
+      <div className="flex justify-between items-center w-full">
+        <JompstartLogo />
+        <article className="hidden w-1/3 md:flex items-center gap-4">
+          <AppButton
+            appVariant="secondary"
+            className="w-1/2"
+            onClick={() => router.push("/auth/register")}
+          >
+            Register
+          </AppButton>
+          <AppButton
+            appVariant="primary"
+            className="w-1/2"
+            onClick={() => router.push("/auth/login")}
+          >
+            Login
+          </AppButton>
+        </article>
+        <Menu
+          className="h-6 w-6 cursor-pointer md:hidden"
+          onClick={() => setShowSidebar(!showSidebar)}
+        />
+      </div>
     </header>
   );
 };
