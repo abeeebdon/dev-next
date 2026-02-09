@@ -15,11 +15,13 @@ const DashboardHeader = () => {
 
           <h2 className="text-lg font-semibold hidden md:block">Welcome</h2>
         </div>
-        <Avatar name="Abeeb Maroof" />
-        <Menu
-          className="h-6 w-6 cursor-pointer md:hidden"
-          onClick={() => setShowSidebar(!showSidebar)}
-        />
+        <div className="flex items-center gap-2">
+          <Avatar name="Abeeb Maroof" />
+          <Menu
+            className="h-6 w-6 cursor-pointer md:hidden"
+            onClick={() => setShowSidebar(!showSidebar)}
+          />
+        </div>
       </header>
       {showSidebar && <MobileSidebar setShowSidebar={setShowSidebar} />}
     </>
