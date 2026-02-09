@@ -4,6 +4,7 @@ import AppButton from "@/components/button/AppButton";
 import { Menu } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import HomeSIdebar from "./HomeSidebar";
 
 export const Header = () => {
   const router = useRouter();
@@ -33,6 +34,7 @@ export const Header = () => {
           onClick={() => setShowSidebar(!showSidebar)}
         />
       </div>
+      {showSidebar && <HomeSIdebar setShowSidebar={setShowSidebar} />}
     </header>
   );
 };
