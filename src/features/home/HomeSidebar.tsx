@@ -1,22 +1,23 @@
+"use client";
 import { Dispatch, SetStateAction } from "react";
-import { dashboardMenuItems } from "../components/constants";
-import SidebarMenuItem from "./DashboardSIdebarCard";
 import { X } from "lucide-react";
-import LogoutButton from "@/components/button/LogoutButton";
+import AppButton from "@/components/button/AppButton";
+import { useRouter } from "next/navigation";
 import { cn } from "@/utils/lib/cn";
 
-const MobileSidebar = ({
+const HomeSIdebar = ({
   setShowSidebar,
   showSidebar,
 }: {
-  showSidebar: boolean;
   setShowSidebar: Dispatch<SetStateAction<boolean>>;
+  showSidebar: boolean;
 }) => {
+  const router = useRouter();
   return (
     <>
       {showSidebar && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          className="fixed inset-0 z-50 bg-black/50 md:hidden"
           onClick={() => setShowSidebar(false)}
         />
       )}
@@ -33,24 +34,26 @@ const MobileSidebar = ({
               className="cursor-pointer"
             />
           </div>
-          <nav className="flex flex-col gap-4 mt-6">
-            {dashboardMenuItems.map(({ href, name, icon: Icon }) => {
-              return (
-                <SidebarMenuItem
-                  key={href}
-                  href={href}
-                  name={name}
-                  Icon={Icon}
-                  collapsed={false}
-                />
-              );
-            })}
-          </nav>
+          <article className="flex flex-col mt-20 gap-4">
+            <AppButton
+              appVariant="secondary"
+              className="w-full"
+              onClick={() => router.push("/auth/register")}
+            >
+              Register
+            </AppButton>
+            <AppButton
+              appVariant="primary"
+              className="w-full"
+              onClick={() => router.push("/auth/login")}
+            >
+              Login
+            </AppButton>
+          </article>
         </article>
-        <LogoutButton collapseText={false} />
       </article>
     </>
   );
 };
 
-export default MobileSidebar;
+export default HomeSIdebar;

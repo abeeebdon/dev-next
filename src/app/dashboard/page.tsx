@@ -1,5 +1,7 @@
+import EventsDashboardPage from "@/features/dashboard/DashboardPage";
+
 const page = () => {
-  return <div>page</div>;
+  return <EventsDashboardPage />;
 };
 
 export default page;

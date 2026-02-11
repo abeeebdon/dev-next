@@ -1,20 +1,9 @@
-import DashboardHeader from "@/features/dashboard/layout/DashboardHeader";
-import DashboardSidebar from "@/features/dashboard/layout/DashboardSidebar";
+import DashboardLayout from "@/features/dashboard/layout/DashboardLayout";
 
-export default function DashboardLayout({
+export default function DashLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <DashboardSidebar />
-      {/* Main content */}
-      <div className="flex flex-1 flex-col">
-        <DashboardHeader />
-        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
-      </div>
-    </div>
-  );
+  return <DashboardLayout>{children}</DashboardLayout>;
 }
