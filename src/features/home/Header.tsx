@@ -10,7 +10,7 @@ export const Header = () => {
   const router = useRouter();
   const [showSidebar, setShowSidebar] = useState(false);
   return (
-    <header className="flex h-20 py-5 bg-white shadow px-6">
+    <header className="flex h-20 py-5  bg-white shadow px-6">
       <div className="flex justify-between items-center w-full">
         <Logo />
         <article className="hidden w-1/3 md:flex items-center gap-4">

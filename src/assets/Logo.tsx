@@ -1,11 +1,13 @@
 const Logo = () => {
   return (
-    <h3 className="md:hidden text-amber-500">
-      Stay
-      <span className="text-purple-800 font-bold text-2xl italic font-stretch-75% ">
+    <h1 className="text-4xl font-bold">
+      <span className="bg-linear-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+        Stay
+      </span>
+      <span className="bg-linear-to-r from-blue-100 to-orange-600 bg-clip-text text-transparent">
         Event
       </span>
-    </h3>
+    </h1>
   );
 };
 

@@ -6,6 +6,7 @@ import { ChevronsRight } from "lucide-react";
 import { cn } from "@/utils/lib/cn";
 import SidebarMenuItem from "./DashboardSIdebarCard";
 import LogoutButton from "@/components/button/LogoutButton";
+import Logo from "@/assets/Logo";
 
 const DashboardSidebar = () => {
   const [collapseText, setCollapseText] = useState(false);
@@ -29,7 +30,13 @@ const DashboardSidebar = () => {
         </button>
         <section className="flex flex-col justify-between  h-full">
           <article>
-            <div className="flex gap-4 items-center mt-2">StayEvent</div>
+            {collapseText ? (
+              <h1 className="text-4xl font-bold text-transparent bg-linear-to-r from-blue-800 to-orange-600 bg-clip-text">
+                SE
+              </h1>
+            ) : (
+              <Logo />
+            )}
             <nav className=" space-y-2 mt-6">
               {dashboardMenuItems.map(({ href, name, icon: Icon }) => {
                 return (

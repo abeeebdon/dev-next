@@ -8,7 +8,9 @@ const DashboardHeader = ({ toggle }: { toggle: () => void }) => {
     <>
       <header className="flex h-20 items-center justify-between  bg-white px-6">
         <div className=" flex items-center gap-2 ">
-          <Logo />
+          <div className="md:hidden">
+            <Logo />
+          </div>
           <h2 className="text-lg font-semibold hidden md:block">Welcome</h2>
         </div>
         <div className="flex items-center gap-2">
