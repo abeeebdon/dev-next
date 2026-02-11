@@ -1,13 +1,10 @@
 "use client";
 import { dashboardMenuItems } from "../components/constants";
 import { useState } from "react";
-import { ChevronsLeft, LogOut } from "lucide-react";
+import { ChevronsLeft } from "lucide-react";
 import { ChevronsRight } from "lucide-react";
 import { cn } from "@/utils/lib/cn";
-import JompLogo from "../../../assets/images/CompanyLogo";
-import JompTextLogo from "@/assets/images/JompTextLogo";
 import SidebarMenuItem from "./DashboardSIdebarCard";
-import ConfirmLogout from "./ConfirmLogout";
 import LogoutButton from "@/components/button/LogoutButton";
 
 const DashboardSidebar = () => {
@@ -32,10 +29,7 @@ const DashboardSidebar = () => {
         </button>
         <section className="flex flex-col justify-between  h-full">
           <article>
-            <div className="flex gap-4 items-center mt-2">
-              <JompLogo size={50} />
-              {!collapseText && <JompTextLogo />}
-            </div>
+            <div className="flex gap-4 items-center mt-2">StayEvent</div>
             <nav className=" space-y-2 mt-6">
               {dashboardMenuItems.map(({ href, name, icon: Icon }) => {
                 return (

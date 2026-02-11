@@ -8,7 +8,7 @@ import AppButton from "@/components/button/AppButton";
 import Link from "next/link";
 import { setCookie } from "@/utils/helpers/cookies";
 import { useRouter } from "next/navigation";
-import JompstartLogo from "@/assets/JompstartLogo";
+import JompstartLogo from "@/assets/Logo";
 type LoginFormValues = yup.InferType<typeof loginSchema>;
 
 const Login = () => {

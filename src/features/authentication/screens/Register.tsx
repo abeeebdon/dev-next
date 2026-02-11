@@ -7,7 +7,7 @@ import AppInput from "@/components/input/AppInput";
 import AppButton from "@/components/button/AppButton";
 import * as yup from "yup";
 import { registerSchema } from "../components/authSchema";
-import JompstartLogo from "@/assets/JompstartLogo";
+import JompstartLogo from "@/assets/Logo";
 
 type RegisterFormValues = yup.InferType<typeof registerSchema>;
 
