@@ -3,25 +3,14 @@ import { useRouter } from "next/navigation";
 const Hero = () => {
   const router = useRouter();
   return (
-    <section className="relative bg-linear-to-br from-purple-300 via-purple-400 to-pink-400 w-full min-h-screen flex items-center justify-center bg-cover bg-center">
-      {/* Overlay */}
-
-      {/* Content */}
+    <section className="relative bg-linear-to-br from-purple-300 via-purple-400 to-pink-400 w-full min-h-[80vh] flex items-center justify-center bg-cover bg-center">
       <div className="relative z-10 text-center px-6 sm:px-8 md:px-12 max-w-4xl mx-auto">
-        {/* Headline */}
-        <h1
-          className="text-white font-bold leading-tight 
-                       text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-        >
+        <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           We Create Events People Remember
         </h1>
 
         {/* Subheadline */}
-        <p
-          className="mt-4 text-gray-200 
-                      text-base sm:text-lg md:text-xl 
-                      max-w-2xl mx-auto"
-        >
+        <p className="mt-4 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
           From weddings to corporate gatherings, we plan, design, and deliver
           events without stress.
         </p>

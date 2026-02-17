@@ -41,7 +41,7 @@ const DashboardSidebar = ({
             ) : (
               <Logo />
             )}
-            <nav className=" space-y-2 mt-6">
+            <nav className=" space-y-2 mt-10">
               {dashboardMenuItems.map(({ href, name, icon: Icon }) => {
                 return (
                   <SidebarMenuItem

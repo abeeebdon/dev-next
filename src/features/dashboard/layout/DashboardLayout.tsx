@@ -12,13 +12,13 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
     setShowSidebar(!showSidebar);
   };
   return (
-    <div className="flex min-h-screen bg-gray-100">
+    <div className="flex h-screen max-h-screen bg-gray-100">
       {/* Sidebar */}
       <DashboardSidebar setShowConfirmLogoutModal={setSHowLogoutModal} />
       {/* Main content */}
       <div className="flex flex-1 flex-col">
         <DashboardHeader toggle={handleToggle} />
-        <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+        <main className="flex-1 p-5 overflow-y-auto">{children}</main>
       </div>
       <MobileSidebar
         setSHowLogoutModal={setSHowLogoutModal}

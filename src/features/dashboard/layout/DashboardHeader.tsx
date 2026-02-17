@@ -11,7 +11,6 @@ const DashboardHeader = ({ toggle }: { toggle: () => void }) => {
           <div className="md:hidden">
             <Logo />
           </div>
-          <h2 className="text-lg font-semibold hidden md:block">Welcome</h2>
         </div>
         <div className="flex items-center gap-2">
           <Avatar name="Abeeb Maroof" />
