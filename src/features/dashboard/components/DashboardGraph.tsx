@@ -30,7 +30,7 @@ const chartConfig = {
 
 export function DashboardGraph() {
   return (
-    <section className="w-full  p-5">
+    <section className="w-full overflow-hidden  p-5">
       <h3 className="text-xl font-semibold text-purple-700 mb-3">
         Event Overview
       </h3>
