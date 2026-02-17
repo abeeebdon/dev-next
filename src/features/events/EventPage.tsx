@@ -9,27 +9,27 @@ import CreateEventModal from "./components/CreateEventModal";
 const EventPage = () => {
   const [showCreate, setShowCreate] = useState(false);
   return (
-    <section className="p-6 space-y-6">
+    <section className="md:p-6 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-BrandGray900">Events</h1>
-          <p className="text-sm text-BrandGray600">
-            Create and manage your events
-          </p>
+          <h1 className="text-2xl font-semibold text-purple">Events</h1>
+          <p className="text-sm text-gray-400">Create and manage your events</p>
         </div>
 
         <AppButton
           appVariant="primary"
-          className="w-40"
+          className="w-20 md:w-40 bg-linear-to-br from-purple to-pink"
           onClick={() => setShowCreate(true)}
         >
-          Create Event
+          <span className="md:hidden text-2xl">+</span>
+
+          <span className="hidden md:block">Create Event</span>
         </AppButton>
       </div>
 
       {/* Events List */}
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {mockEvents.map((event) => (
           <EventCard key={event.id} {...event} />
         ))}

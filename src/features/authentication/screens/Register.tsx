@@ -7,7 +7,7 @@ import AppInput from "@/components/input/AppInput";
 import AppButton from "@/components/button/AppButton";
 import * as yup from "yup";
 import { registerSchema } from "../components/authSchema";
-import JompstartLogo from "@/assets/Logo";
+import Logo from "@/assets/Logo";
 
 type RegisterFormValues = yup.InferType<typeof registerSchema>;
 
@@ -30,7 +30,7 @@ export default function Register() {
       <main className="w-full max-w-md rounded-lg bg-white shadow p-8 mt-10">
         {/* Header */}
         <div className="flex justify-center pt-20">
-          <JompstartLogo />
+          <Logo />
         </div>
         <div className="mb-6 text-center mt-2">
           <h3 className="text-xl font-semibold">Create your account</h3>
@@ -94,7 +94,7 @@ export default function Register() {
           Already have an account?{" "}
           <Link
             href="/auth/login"
-            className="font-medium text-orange-500 hover:underline"
+            className="font-medium text-pink hover:underline"
           >
             Login
           </Link>

@@ -26,13 +26,9 @@ export const EditProfile = ({ onClose }: EditProfileProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      {/* Overlay click */}
-
-      {/* Modal */}
       <div className="relative z-10 w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
-        {/* Header */}
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold">Edit Profile</h3>
+          <h3 className="text-lg font-semibold ">Edit Profile</h3>
           <button onClick={onClose}>
             <X className="h-5 w-5 text-gray-600" />
           </button>
@@ -82,7 +78,7 @@ export const EditProfile = ({ onClose }: EditProfileProps) => {
         </div>
 
         {/* Actions */}
-        <div className="mt-6 flex justify-end gap-3">
+        <div className="mt-6 flex justify-center px-4 gap-5">
           <AppButton appVariant="secondary" onClick={onClose} className="w-1/2">
             Cancel
           </AppButton>

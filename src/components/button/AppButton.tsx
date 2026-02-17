@@ -26,10 +26,9 @@ export default function AppButton({
     <Button
       className={cn(
         "flex items-center gap-2 w-full h-11 px-6 p-3 rounded-lg font-semibold",
-        appVariant === "primary" &&
-          "bg-orange-500 text-white hover:bg-orange-600",
+        appVariant === "primary" && "bg-pink-500 text-white hover:bg-pink-600",
         appVariant === "secondary" &&
-          "border border-orange-500 text-orange-500 hover:bg-orange-50",
+          "border border-pink-500  text-pink-400 hover:bg-pink-50",
         className,
       )}
       disabled={disabled || isLoading}

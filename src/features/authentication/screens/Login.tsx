@@ -8,7 +8,7 @@ import AppButton from "@/components/button/AppButton";
 import Link from "next/link";
 import { setCookie } from "@/utils/helpers/cookies";
 import { useRouter } from "next/navigation";
-import JompstartLogo from "@/assets/Logo";
+import Logo from "@/assets/Logo";
 type LoginFormValues = yup.InferType<typeof loginSchema>;
 
 const Login = () => {
@@ -27,10 +27,10 @@ const Login = () => {
     router.push("/dashboard");
   };
   return (
-    <section className="flex justify-center h-screen items-center md:items-start  ">
-      <main className="w-full max-w-md text-center rounded-lg h-fit bg-white shadow p-8 ">
+    <section className="flex justify-center h-screen  items-center   ">
+      <main className="w-full max-w-md text-center  rounded-lg  bg-white md:shadow p-8 ">
         <div className="flex justify-center ">
-          <JompstartLogo />
+          <Logo />
         </div>
         <div className="mt-2">
           <h3>Welcome back</h3>
@@ -53,7 +53,7 @@ const Login = () => {
           <div className="text-right">
             <Link
               href="/forgot-password"
-              className="text-sm text-orange-500 hover:underline"
+              className="text-sm text-pink-500 hover:underline"
             >
               Forgot password?
             </Link>
@@ -68,7 +68,7 @@ const Login = () => {
           Don’t have an account?{" "}
           <Link
             href="/auth/register"
-            className="font-medium text-orange-500 hover:underline"
+            className="font-medium text-pink-500 hover:underline"
           >
             Create account
           </Link>
