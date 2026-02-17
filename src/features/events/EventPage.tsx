@@ -13,15 +13,13 @@ const EventPage = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-BrandGray900">Events</h1>
-          <p className="text-sm text-BrandGray600">
-            Create and manage your events
-          </p>
+          <h1 className="text-2xl font-semibold text-purple">Events</h1>
+          <p className="text-sm text-gray-400">Create and manage your events</p>
         </div>
 
         <AppButton
           appVariant="primary"
-          className="w-40"
+          className="w-40 bg-linear-to-br from-purple to-pink"
           onClick={() => setShowCreate(true)}
         >
           Create Event
@@ -29,7 +27,7 @@ const EventPage = () => {
       </div>
 
       {/* Events List */}
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {mockEvents.map((event) => (
           <EventCard key={event.id} {...event} />
         ))}

@@ -15,4 +15,18 @@ export const mockEvents: EventType[] = [
     location: "Abuja, Nigeria",
     description: "Pitch your startup idea to investors.",
   },
+  {
+    id: "3",
+    title: "Startup Pitch Night",
+    date: "2026-04-01",
+    location: "Abuja, Nigeria",
+    description: "Pitch your startup idea to investors.",
+  },
+  {
+    id: "4",
+    title: "Startup Pitch Night",
+    date: "2026-04-01",
+    location: "Abuja, Nigeria",
+    description: "Pitch your startup idea to investors.",
+  },
 ];

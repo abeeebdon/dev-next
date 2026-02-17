@@ -12,7 +12,7 @@ const EventSummaryCard = ({ title, count, icon, className }: Props) => {
   return (
     <div
       className={cn(
-        "flex items-center gap-4 rounded-xl bg-white p-5 shadow-sm border border-BrandOutline",
+        "flex items-center gap-4 rounded-xl bg-white p-5 py-6 shadow-sm border border-pink-soft",
         className,
       )}
     >

@@ -10,3 +10,18 @@ body {
     cursor: pointer;
   }
 }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@theme {
+  --color-purple: #5b2eff;
+  --color-purple-soft: #7c5cff;
+  --color-pink: #ff4d8d;
+  --color-pink-soft: #ffd1e6;
+}
