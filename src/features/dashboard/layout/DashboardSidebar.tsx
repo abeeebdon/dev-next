@@ -1,14 +1,18 @@
 "use client";
 import { dashboardMenuItems } from "../components/constants";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { ChevronsLeft } from "lucide-react";
 import { ChevronsRight } from "lucide-react";
 import { cn } from "@/utils/lib/cn";
 import SidebarMenuItem from "./DashboardSIdebarCard";
 import LogoutButton from "@/components/button/LogoutButton";
 import Logo from "@/assets/Logo";
-
-const DashboardSidebar = () => {
+interface DashboardSidebarProps {
+  setShowConfirmLogoutModal: Dispatch<SetStateAction<boolean>>;
+}
+const DashboardSidebar = ({
+  setShowConfirmLogoutModal,
+}: DashboardSidebarProps) => {
   const [collapseText, setCollapseText] = useState(false);
   return (
     <>
@@ -52,7 +56,10 @@ const DashboardSidebar = () => {
             </nav>
           </article>
 
-          <LogoutButton collapseText={collapseText} />
+          <LogoutButton
+            setShowConfirmLogoutModal={setShowConfirmLogoutModal}
+            collapseText={collapseText}
+          />
         </section>
       </aside>
     </>

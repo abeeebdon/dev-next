@@ -9,7 +9,7 @@ import CreateEventModal from "./components/CreateEventModal";
 const EventPage = () => {
   const [showCreate, setShowCreate] = useState(false);
   return (
-    <section className="p-6 space-y-6">
+    <section className="md:p-6 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -19,10 +19,12 @@ const EventPage = () => {
 
         <AppButton
           appVariant="primary"
-          className="w-40 bg-linear-to-br from-purple to-pink"
+          className="w-20 md:w-40 bg-linear-to-br from-purple to-pink"
           onClick={() => setShowCreate(true)}
         >
-          Create Event
+          <span className="md:hidden text-2xl">+</span>
+
+          <span className="hidden md:block">Create Event</span>
         </AppButton>
       </div>
 

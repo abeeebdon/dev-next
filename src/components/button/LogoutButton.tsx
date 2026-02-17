@@ -1,11 +1,14 @@
-import ConfirmLogout from "@/features/dashboard/layout/ConfirmLogout";
 import { cn } from "@/utils/lib/cn";
 import { LogOut } from "lucide-react";
-import { useState } from "react";
-
-const LogoutButton = ({ collapseText }: { collapseText?: boolean }) => {
-  const [showConfirmLogoutModal, setShowConfirmLogoutModal] = useState(false);
-
+import { Dispatch, SetStateAction } from "react";
+interface LogoutButtonProps {
+  collapseText: boolean;
+  setShowConfirmLogoutModal: Dispatch<SetStateAction<boolean>>;
+}
+const LogoutButton = ({
+  collapseText,
+  setShowConfirmLogoutModal,
+}: LogoutButtonProps) => {
   return (
     <>
       <div
@@ -18,7 +21,6 @@ const LogoutButton = ({ collapseText }: { collapseText?: boolean }) => {
         <LogOut size={16} color="red" />
         {!collapseText && <span className="text-red-500">Logout</span>}
       </div>
-      {showConfirmLogoutModal && <ConfirmLogout />}
     </>
   );
 };

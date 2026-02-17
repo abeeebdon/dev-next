@@ -1,15 +1,16 @@
 import { Dispatch, SetStateAction } from "react";
 import { dashboardMenuItems } from "../components/constants";
 import SidebarMenuItem from "./DashboardSIdebarCard";
-import { X } from "lucide-react";
-import LogoutButton from "@/components/button/LogoutButton";
+import { LogOut, X } from "lucide-react";
 import { cn } from "@/utils/lib/cn";
 
 const MobileSidebar = ({
   setShowSidebar,
+  setSHowLogoutModal,
   showSidebar,
 }: {
   showSidebar: boolean;
+  setSHowLogoutModal: Dispatch<SetStateAction<boolean>>;
   setShowSidebar: Dispatch<SetStateAction<boolean>>;
 }) => {
   return (
@@ -37,6 +38,7 @@ const MobileSidebar = ({
             {dashboardMenuItems.map(({ href, name, icon: Icon }) => {
               return (
                 <SidebarMenuItem
+                  handleClick={() => setShowSidebar(false)}
                   key={href}
                   href={href}
                   name={name}
@@ -47,7 +49,14 @@ const MobileSidebar = ({
             })}
           </nav>
         </article>
-        <LogoutButton collapseText={false} />
+        <div
+          className="flex items-center gap-3 cursor-pointer rounded-lg px-4 py-2  hover:bg-gray-100"
+          onClick={() => setSHowLogoutModal(true)}
+        >
+          <LogOut size={16} color="red" />
+          <span className="text-red-500">Logout</span>
+        </div>
+        {/* <LogoutButton collapseText={false} /> */}
       </article>
     </>
   );

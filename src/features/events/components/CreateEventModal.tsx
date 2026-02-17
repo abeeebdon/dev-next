@@ -28,7 +28,7 @@ const CreateEventModal = ({ setShowCreate }: CreateEventPageProps) => {
   };
   return (
     <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
-      <div className="bg-white p-6  rounded-2xl w-full h-[97%] overflow-y-auto no-scrollbar max-w-md">
+      <div className="bg-white p-6 rounded-2xl w-[90%] max-h-[97%] overflow-y-auto no-scrollbar max-w-md">
         <div>
           <div className="flex justify-end">
             <X
